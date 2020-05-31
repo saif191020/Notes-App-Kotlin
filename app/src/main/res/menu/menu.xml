@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/delete_all_menu"
+        android:title="Delete All Notes" />
+    <item
+        android:id="@+id/dark_mode_switch"
+        android:title="Dark mode"
+        app:actionLayout="@layout/switch_item" />
+</menu>

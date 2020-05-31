@@ -14,9 +14,11 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/colorAccent"
         android:clickable="true"
+
         android:src="@drawable/ic_add_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="KeyboardInaccessibleWidget" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/noteRecycler"

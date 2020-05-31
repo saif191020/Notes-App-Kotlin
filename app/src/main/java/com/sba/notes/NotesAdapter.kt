@@ -2,6 +2,7 @@ package com.sba.notes
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DiffUtil
@@ -35,6 +36,10 @@ class NotesAdapter : ListAdapter<Notes, NotesAdapter.NotesViewHolder>(NotesDiffC
         fun bind(item:Notes) {
            binding.noteTitle.text = item.title
            binding.noteDesc.text = item.description
+            if(binding.noteTitle.text.isBlank())
+                binding.noteTitle.visibility=View.GONE
+            else
+                binding.noteTitle.visibility=View.VISIBLE
            binding.noteConstrainLayout.setOnClickListener {
                val action = AllNotesFragmentDirections.actionAllNotesFragmentToEditNoteFragment()
                action.updateNote = item

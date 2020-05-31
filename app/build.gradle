@@ -64,5 +64,8 @@ dependencies {
     //Material Design Library
     implementation 'com.google.android.material:material:1.1.0'
 
+    //Slide To Act Library
+    implementation "com.ncorti:slidetoact:0.8.0"
+
 
 }

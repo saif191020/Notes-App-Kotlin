@@ -6,7 +6,6 @@
         android:id="@+id/delete_all_menu"
         android:title="Delete All Notes" />
     <item
-        android:id="@+id/dark_mode_switch"
-        android:title="Dark mode"
-        app:actionLayout="@layout/switch_item" />
+        android:id="@+id/dark_mode_menu"
+        android:title="Dark Mode Selection" />
 </menu>

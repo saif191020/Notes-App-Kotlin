@@ -1,6 +1,10 @@
 package com.sba.notes
 
+import android.app.AlertDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 
@@ -8,19 +12,22 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.*
 import com.google.android.material.snackbar.Snackbar
+import com.ncorti.slidetoact.SlideToActView
 import com.sba.notes.database.NotesViewModel
 import com.sba.notes.databinding.FragmentAllNotesBinding
 
 
 class AllNotesFragment : Fragment() {
+
     private var fbind: FragmentAllNotesBinding? = null
     private lateinit var notesViewModel: NotesViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-      //  setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_all_notes, container, false)
     }
 
@@ -93,25 +100,49 @@ class AllNotesFragment : Fragment() {
 
     }
 
-//    private fun deleteALL() {
-//        //val deleteDialog = activity?.let { DeleteAllAlertDialoge(it) }
-//      //  deleteDialog?.startDeleteDialoge()
-//
-//    }
+    private fun deleteALLDialoge() {
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//
-//        inflater.inflate(R.menu.menu, menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.delete_all_menu ->deleteALL()
-//            R.id.dark_mode_switch->setTheme()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
+        val inflater = LayoutInflater.from(activity)
+        val view =inflater.inflate(R.layout.alert_dialog_delete_all,null)
+        val slide =view.findViewById<SlideToActView>(R.id.slideConfirm)
+        val dialog =AlertDialog.Builder(activity)
+            .setView(view)
+            .create()
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
+
+        slide.onSlideCompleteListener = object: SlideToActView.OnSlideCompleteListener {
+
+            override fun onSlideComplete(slider: SlideToActView) {
+                Log.d("Test","Deleted")
+
+                deleteALL()
+                dialog.dismiss()
+            }
+        }
+
+
+
+
+    }
+
+    private fun deleteALL() {
+        notesViewModel.deleteAllNote()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.delete_all_menu -> deleteALLDialoge()
+            R.id.dark_mode_menu -> setTheme()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 
 }

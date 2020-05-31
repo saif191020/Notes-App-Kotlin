@@ -21,12 +21,12 @@
     <fragment
         android:id="@+id/editNoteFragment"
         android:name="com.sba.notes.EditNoteFragment"
-        android:label="fragment_edit_note"
+        android:label="Note"
         tools:layout="@layout/fragment_edit_note">
         <argument
             android:name="updateNote"
+            android:defaultValue="@null"
             app:argType="com.sba.notes.database.Notes"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 </navigation>

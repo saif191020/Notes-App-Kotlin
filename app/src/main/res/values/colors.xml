@@ -6,5 +6,6 @@
     <color name="textColor">#000000</color>
     <color name="cardBckGround">#FFFFFF</color>
     <color name="strockColor">#E0E0E0E0</color>
+    <color name="indigo">#536DFE</color>
 
 </resources>

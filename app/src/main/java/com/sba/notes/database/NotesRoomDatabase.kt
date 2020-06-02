@@ -52,9 +52,14 @@ public abstract class NotesRoomDatabase : RoomDatabase() {
         suspend fun populateDatabase(notesDao: NotesDao) {
 
 
-            notesDao.insertNote(Notes(title = "Note Tip #3",description = "Enjoy Your New Notes App"))
-            notesDao.insertNote(Notes(title = "Note Tip #2",description = "Swipe the Notes left or right to delete It 😉\nSwipe>>>>>>>>"))
-            notesDao.insertNote(Notes(title = "Note Tip #1",description = "Tap on this Note to Edit / View this note. \nTap on the plus icon in the bottom right to add new note."))
+            notesDao.insertNote(Notes(title = "Note Tip #4",description = "Enjoy Your New Notes App"))
+            notesDao.insertNote(Notes(title = "Note Tip #3",description = "Done with a note? swipe it away to Delete it.\n" +
+                    "\n" +
+                    "Give it a try! You Will have 5 sec to Undo.\n\nSwipe>>>>>>>>"))
+            notesDao.insertNote(Notes(title = "Note Tip #2",description = "Three Dots in top right!\n\nClick it to change Theme or delete All Notes"))
+            notesDao.insertNote(Notes(title = "Note Tip #1",description = "Notes lets you quickly capture what’s on your mind.\n" +
+                    "\n" +
+                    "To start a new note, use the \"Plus Button\" Below."))
 
         }
     }

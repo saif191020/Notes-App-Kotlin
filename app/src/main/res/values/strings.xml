@@ -7,4 +7,11 @@
     <string name="sample_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="are_you_sure_you_want_to_delete_all_notes">Are you sure you want to DELETE All Notes ?</string>
     <string name="this_process_is_irreversible">(This Process Is IRREVERSIBLE)</string>
+    <string name="choose_theme">Choose theme</string>
+    <string name="system_default">System default</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="follow_battery_saver">Follow Battery saver</string>
+    <string name="title">Title</string>
+    <string name="note">Note</string>
 </resources>

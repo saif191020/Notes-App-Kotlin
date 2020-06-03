@@ -16,9 +16,9 @@ Download from Releases page [**here**]() or from Google Drive Link [**here**]()
     <th>Dark Theme</th>
   </tr>
   <tr>
-    <td><img src="screenshots/Home.jpg"/></td>
-    <td><img src="screenshots/AddNotes.jpg"/></td>
-    <td><img src="screenshots/DarkMode.jpg"</td>
+    <td><img src="screenshots/Home.png"/></td>
+    <td><img src="screenshots/AddNotes.png"/></td>
+    <td><img src="screenshots/DarkMode.png"</td>
   </tr>
 </table>
 

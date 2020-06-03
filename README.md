@@ -5,7 +5,7 @@ Notes App is a simple app developed to take notes Quickly
 
 ## ⬇Download 
 Download and try the app. 
-Download from Releases page [**here**]() or from Google Drive Link [**here**]()
+Download from Releases page [**here**](https://github.com/saif191020/Notes-App-Kotlin/releases/tag/v1.0) or from Google Drive Link [**here**](https://drive.google.com/file/d/1U0R2fYCpjBvDcFXk5pQ1XDVZef9B7Z7Y/view?usp=sharing)
 
 ## 🖼 Screenshots
 

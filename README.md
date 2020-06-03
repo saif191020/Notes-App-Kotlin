@@ -28,7 +28,7 @@ Download from Releases page [**here**](https://github.com/saif191020/Notes-App-K
 3. Data Binding - To access the views directly and The accessing of view reduced the overhead and the app performance
 increased drastically.
 4. Recycler View - To Display the notes stored By the user
-5. Coroutines - To  perform database related operations asynchronously (Database Operation Include insert/delete/deleteAll/retrieve ALl)
+5. Coroutines - To  perform database related operations asynchronously (Database Operation Include insert/delete/deleteAll/update/retrieve ALl)
 6. Material Design Library - Used throughout the app to maintain Consistency with Android Design Guideline 
 7. Dark Mode (Night Mode) - Saves Battery and Reduces strain on eyes.
 
